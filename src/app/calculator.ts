@@ -18,7 +18,7 @@ class Calculator {
     }
 
     const [delimiter, isCustom] = this.findDelimiter(numbers);
-    const revisedString = numbers.replace('/n',',');
+    const revisedString = numbers.replace('\n',',');
     let numberList = revisedString.split(delimiter);
     if (isCustom) {
       numberList.pop();
@@ -35,8 +35,6 @@ class Calculator {
   public findDelimiter (input: String): [String,Boolean] {
     const inputList = input.split('/n');
     if (inputList[0].startsWith('/')) {
-      console.log('#######', inputList[0].substr(2), '<<<<<<');
-
       return [inputList[0].substr(2), true];
     }
     return [',', false];

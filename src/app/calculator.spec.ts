@@ -1,10 +1,8 @@
-import Test from './calculator';
 import Calculator from "./calculator";
 import iit = testing.iit;
-import {skip} from "rxjs/operator/skip";
 
 describe ('Calculator', () => {
-  xdescribe ('add', () => {
+  describe ('add', () => {
     it ('should return 0 for empty', () => {
       // Arrange
       const calculator = new Calculator();
@@ -65,7 +63,7 @@ describe ('Calculator', () => {
       const calculator = new Calculator();
 
       // Act
-      const result = calculator.add('1/n2');
+      const result = calculator.add('1\n2');
 
       // Assert
       expect (result).toEqual(3);
@@ -76,7 +74,7 @@ describe ('Calculator', () => {
       const calculator = new Calculator();
 
       // Act
-      const result = calculator.add('1/n2,3');
+      const result = calculator.add('1\n2,3');
 
       // Assert
       expect (result).toEqual(6);
